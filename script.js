@@ -5,18 +5,10 @@ const config = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('data.json')
-    .then(res => res.json())
-    .then(data => {
-      config.series = data.series;
-      config.movies = data.movies;
-      createCarousels(); // ou sua função de exibição
-    })
-    .catch(error => {
-      console.error('Erro ao carregar o JSON:', error);
-    });
-
-  initialize(); // se essa função estiver declarada
+  config.series = window.data.series;
+  config.movies = window.data.movies;
+  createCarousels();
+  initialize();
 });
                 swipeThreshold: 100
             };
