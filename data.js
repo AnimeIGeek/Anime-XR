@@ -1,4 +1,4 @@
-window.data = {
+{
   "series": [
     {
       "title": "Estou Acostumado",
